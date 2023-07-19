@@ -11,28 +11,70 @@ a { color:blue; text-decoration: none;}
     border-top: solid 1px #cdcdcd;
     border-bottom: solid 1px #cdcdcd;
 }
+header > figure {
+    text-align: left;
+}
 .content {
     max-width: 1440px;
     margin: auto;
     grid-gap: 3rem;
     display: grid;
     gap: 3rem;
-    grid-template-areas: "sidebar main anchors";
-    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
     padding-left: 1rem;
     padding-right: 1rem;
 }
-.footer {
-    min-height: 100px;
+blockquote{
+    border-left: gray solid 5px;
+    background-color: #f5f5f5;
+    padding: 15px;
+}
+#author{
+    text-align: end;
+    font-style: italic;
+}
+footer {
+    min-height: 70px;
     border-top: solid 1px #cdcdcd;
+    font-style: italic;
+    text-align: center;
+}
+abbr {
+    text-decoration: none;
 }
 .anchors {
     border-left: solid 1px #cdcdcd;
     padding-left: 15px;
-}
-.sidebar {
+    }
+aside {
     border-right: solid 1px #cdcdcd;
 }
 figure {
     text-align: center;
+    font-style: italic;
+}
+table, th, td{
+    border: 2px solid gray;
+    border-collapse: collapse;
+}
+.inicio {
+    text-align: center;
+    color: #000;
+}
+@media screen and (min-width: 380px) {
+    .content{
+        grid-template-areas: "sidebar main anchors";
+        grid-template-columns: 10rem 1fr 10rem; 
+    }
+}
+@media screen and (min-width: 576px) {
+    .content{
+        grid-template-areas: "sidebar main anchors";
+        grid-template-columns: 10rem 1.5fr 10rem; 
+    }
+}
+@media screen and (min-width: 992px) {
+    .content{
+        grid-template-areas: "sidebar main anchors";
+        grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
+    }
 }
